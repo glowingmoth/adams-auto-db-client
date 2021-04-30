@@ -1,0 +1,8 @@
+li {
+  list-style-type: none;
+}
+
+
+td, th {
+  border: solid 1px black;
+}
