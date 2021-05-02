@@ -9,28 +9,45 @@ const Read = () => {
 
   useEffect(() => {
     Axios.get('http://localhost:3001/read').then((response) => {
-      setCustomerList(response.data);
+      console.log(response)  
+    setCustomerList(response.data); 
+      
+    }).catch(error => {
+      console.log(error);
     });
   }, []);
 
-  const handleDetails = () => {
-
-  };
 
   return (
     <div>
-      <h1>Read</h1>
-      <table>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Phone</th>
-        </tr>
-
-    {customerList.map(customer => (
-      <CustomerRow id={customer.customer_id} firstName={customer.firstName} lastName={customer.lastName} phone={customer.phone} />
-  ))}
-      </table>
+     <table>
+       <thead>
+         <tr>
+         <th>
+          First Name
+         </th>
+          <th>
+            Last Name
+          </th>
+          <th>
+            Phone
+          </th> 
+          </tr>       
+       </thead>
+            
+         {customerList.map(customer => (
+            <CustomerRow 
+              key={customer.customer_id} 
+              id={customer.customer_id}
+              firstName={customer.firstName} 
+              lastName={customer.lastName} 
+              phone={customer.phone} 
+            />
+            )
+          )
+          }
+        
+        </table>
     </div>
   );
 };

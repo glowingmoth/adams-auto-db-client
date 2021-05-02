@@ -1,0 +1,20 @@
+#login {
+    margin-top: 50px;
+}
+
+input {
+    margin: 10px;
+}
+
+input[type="text"], textarea {
+    background-color: #e4eaea;
+}
+
+button {
+    background-color: cornsilk;
+}
+
+#login-message {
+    margin-bottom: 50px;
+}
+
