@@ -46,7 +46,7 @@ const CustomerCreation = () => {
 
   return (
     <div className="form">
-      <p>Customer Details</p>
+      <p className="category">Customer Details</p>
 
         <div className="form-item">
           <label>First Name: </label>
@@ -66,7 +66,7 @@ const CustomerCreation = () => {
           <input type="text" onChange={(e) => {setEmail(e.target.value)}}/>
         </div>
         
-          <p>Address</p>
+          <p className="category">Address</p>
   
         <div className="form-item">
           <label>House Number: </label>
@@ -85,7 +85,7 @@ const CustomerCreation = () => {
           <input type="text" onChange={(e) => {setCity(e.target.value)}}/>
         </div>
 
-        <p>Vehicle Details</p>
+        <p className="category">Vehicle Details</p>
         <div className="form-item">
           <label>Make: </label>
           <input type="text" onChange={(e) => {setMake(e.target.value)}}/>

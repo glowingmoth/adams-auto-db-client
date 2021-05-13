@@ -1,3 +1,40 @@
-#customer-details {
+#customer-details-wrapper {
+    width: 250px;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customer-details {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.category {
+    color: coral;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 1px;
+    margin-bottom: 40px;
+    margin: 0;
+}
+
+button {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.edit {
+    background-color: lightskyblue;
+}
+
+.delete {
+    background-color: lightpink;
 }

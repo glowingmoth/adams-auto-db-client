@@ -27,3 +27,7 @@ table {
 input[type="text"], textarea {
     background-color: #e4eaea;
 }
+
+button {
+    background-color: lightskyblue;
+}

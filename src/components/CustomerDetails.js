@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/CustomerDetails.css'
+import '../styles/CustomerDetails.css';
 
 
 
@@ -9,40 +9,50 @@ const CustomerDetails = (props) => {
   return (
     <div>
       <Link to={`/read`}>Back</Link>
-      <div id="customer-details">
-        First Name: {props.firstName}
-      </div>
-      <div>
-        Last Name: {props.lastName}
-      </div>
-      <div>
-        Phone: {props.phone}
-      </div>
-      <div>
-        Email: {props.email}
-      </div>
+      <div id="customer-details-wrapper">
 
-      <div>
-        House Number: {props.houseNumber}
-      </div>
-      <div>
-        Street: {props.street}
-      </div>
-      <div>
-        Suburb: {props.suburb}
-      </div>
-      <div>
-        City: {props.city}
-      </div>
-      Vehicle
-      <div>
-        Make:{props.make}
-      </div>
-      <div>
-        Model: {props.model}
-      </div>
-      <div>
-        Year: {props.year}
+      <p className="category">Customer</p>
+        <div className="customer-details">
+          <p>{props.firstName} &nbsp;{props.lastName}</p>
+        </div>
+
+        <div className="customer-details">
+          <p>{props.phone}</p>
+        </div>
+        
+        <div className="customer-details">
+          <p>{props.email}</p>
+        </div>
+
+        <p className="category">Address</p>
+
+        <div className="customer-details">
+          <p>{props.houseNumber} &nbsp;{props.street} Street</p>
+        </div>
+
+        <div className="customer-details">
+          <p>{props.suburb}</p>
+        </div>
+
+        <div className="customer-details">
+          <p>{props.city}</p>
+        </div >
+
+        <p className="category">Vehicle</p>
+        
+        <div className="customer-details">
+          <p>Make:</p><p>{props.make}</p>
+        </div>
+
+        <div className="customer-details">
+          <p>Model:</p> <p>{props.model}</p>
+        </div>
+
+        <div className="customer-details">
+          <p>Year:</p> <p>{props.year}</p>
+        </div>
+        <button className="button edit">Edit</button>
+        <button className="button delete">Delete</button>
       </div>
     </div>
   );

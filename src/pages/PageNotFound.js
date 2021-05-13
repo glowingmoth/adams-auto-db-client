@@ -4,7 +4,7 @@ const PageNotFound = () => {
 
   return (
     <div>
-      Page Not Found!
+      How'd you end up here?
     </div>
   );
 };

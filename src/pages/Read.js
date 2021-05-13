@@ -26,13 +26,13 @@ const Read = () => {
        <thead>
          <tr>
          <th>
-          First Name
+          <p className="list-category">First Name</p>
          </th>
           <th>
-            Last Name
+          <p className="list-category">Last Name</p>
           </th>
           <th>
-            Phone
+          <p className="list-category">Phone</p>
           </th> 
           </tr>       
        </thead>
