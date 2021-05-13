@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../CustomerDetails.css'
+import '../styles/CustomerDetails.css'
 
 
 
 const CustomerDetails = (props) => {
-
+  console.log(props)
   return (
     <div>
       <Link to={`/read`}>Back</Link>

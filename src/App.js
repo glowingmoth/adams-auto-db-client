@@ -1,5 +1,5 @@
 
-import './App.css';
+import './styles/App.css';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Create from './pages/Create';
 import Read from './pages/Read';

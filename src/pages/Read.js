@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-import '../Read.css';
+import '../styles/Read.css';
 import CustomerRow from '../components/CustomerRow';
 
 const Read = () => {
