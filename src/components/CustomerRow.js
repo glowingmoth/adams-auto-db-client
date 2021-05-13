@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import CustomerDetails from './CustomerDetails';
 // import Axios from 'axios';
 
 
 const CustomerRow = (props) => {
 
+  // console.log(props);
   // Axios.post('http://localhost:3001/delete', {});
 
   return (

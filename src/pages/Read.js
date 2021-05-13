@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import '../Read.css';
 import CustomerRow from '../components/CustomerRow';
@@ -9,7 +10,7 @@ const Read = () => {
 
   useEffect(() => {
     Axios.get('http://localhost:3001/read').then((response) => {
-      console.log(response)  
+      // console.log(response)  
     setCustomerList(response.data); 
       
     }).catch(error => {
@@ -20,6 +21,7 @@ const Read = () => {
 
   return (
     <div>
+      <Link exact to="/create">Create</Link>
      <table>
        <thead>
          <tr>
@@ -42,6 +44,7 @@ const Read = () => {
               firstName={customer.firstName} 
               lastName={customer.lastName} 
               phone={customer.phone} 
+              email={customer.email}
             />
             )
           )
