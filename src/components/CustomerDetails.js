@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link, useParams } from 'react-router-dom';
 import '../styles/CustomerDetails.css';
 
 
 
 const CustomerDetails = (props) => {
-  console.log(props)
+  
+  const history = useHistory();
+  const { id } = useParams();
+
+  const handleEdit = () => {
+    history.push(`/update/${id}`)
+  }
+
   return (
     <div>
       <Link to={`/read`}>Back</Link>
@@ -51,7 +58,7 @@ const CustomerDetails = (props) => {
         <div className="customer-details">
           <p>Year:</p> <p>{props.year}</p>
         </div>
-        <button className="button edit">Edit</button>
+        <button className="button edit" onClick={handleEdit}>Edit</button>
         <button className="button delete">Delete</button>
       </div>
     </div>

@@ -7,8 +7,14 @@
 
 .customer-details {
     display: flex;
-    /* align-items: center; */
+    margin-top: 1px;
+    align-items: center;
     justify-content: center;
+}
+
+.customer-details p {  
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .category {
@@ -16,12 +22,6 @@
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 10px;
-}
-
-p {
-    margin-top: 1px;
-    margin-bottom: 40px;
-    margin: 0;
 }
 
 button {

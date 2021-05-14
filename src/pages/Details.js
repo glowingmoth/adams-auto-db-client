@@ -1,7 +1,8 @@
 import React, { useEffect, useState }from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Axios from 'axios';
 import CustomerDetails from '../components/CustomerDetails';
+
 
 
 const Details = () => {
@@ -10,14 +11,13 @@ const Details = () => {
   const { id } = useParams(); 
   
   useEffect(() => {
-    Axios.get(`http://localhost:3001/read/${id}`).then((response) => {
+    Axios.get(`http://localhost:3001/read/${id}`).then(response => {
       setCustomerDetails(response.data[0]);
-      console.log(response.data);
-      console.log(customerDetails.firstName)
     }).catch(error => {
       console.log(error);
     });
-  }, []);
+  }, [id]);
+
 
   return (
     <div>

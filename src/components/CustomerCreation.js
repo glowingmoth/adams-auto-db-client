@@ -49,53 +49,53 @@ const CustomerCreation = () => {
       <p className="category">Customer Details</p>
 
         <div className="form-item">
-          <label>First Name: </label>
+          <label>First Name </label>
           <input type="text" onChange={(e) => {setFirstName(e.target.value)}}/>
         </div >
 
         <div className="form-item">
-          <label>Last Name: </label>
+          <label>Last Name </label>
           <input type="text" onChange={(e) => {setLastName(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>Phone Number: </label>
+          <label>Phone </label>
           <input type="text" onChange={(e) => {setPhone(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>Email: </label>
+          <label>Email </label>
           <input type="text" onChange={(e) => {setEmail(e.target.value)}}/>
         </div>
         
           <p className="category">Address</p>
   
         <div className="form-item">
-          <label>House Number: </label>
+          <label>Number </label>
           <input type="text" onChange={(e) => {setHouseNumber(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>Street: </label>
+          <label>Street </label>
           <input type="text" onChange={(e) => {setStreet(e.target.value)}}/>
         </div> 
         <div className="form-item">
-          <label>Suburb: </label>
+          <label>Suburb </label>
           <input type="text" onChange={(e) => {setSuburb(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>City: </label>
+          <label>City </label>
           <input type="text" onChange={(e) => {setCity(e.target.value)}}/>
         </div>
 
         <p className="category">Vehicle Details</p>
         <div className="form-item">
-          <label>Make: </label>
+          <label>Make </label>
           <input type="text" onChange={(e) => {setMake(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>Model: </label>
+          <label>Model </label>
           <input type="text" onChange={(e) => {setModel(e.target.value)}}/>
         </div>
         <div className="form-item">
-          <label>Year: </label>
+          <label>Year </label>
           <input type="text" onChange={(e) => {setYear(e.target.value)}}/>
         </div>
 
