@@ -5,6 +5,7 @@ import Create from './pages/Create';
 import Read from './pages/Read';
 import Update from './pages/Update';
 import Details from './pages/Details';
+import Delete from './pages/Delete';
 import PageNotFound from './pages/PageNotFound';
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/update/:id"  exact component={Update} />
           <Route path="/read"  exact component={Read} />
           <Route path="/read/:id"  exact component={Details} />
+          <Route path="/delete/:id"  exact component={Delete} />
           <Route path="*"  exact component={PageNotFound} />
         </Switch>
       </Router>

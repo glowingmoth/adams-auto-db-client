@@ -11,7 +11,11 @@ const CustomerDetails = (props) => {
 
   const handleEdit = () => {
     history.push(`/update/${id}`)
-  }
+  };
+
+  const handleDelete = () => {
+    history.push(`/delete/${id}`)
+  };
 
   return (
     <div>
@@ -59,7 +63,7 @@ const CustomerDetails = (props) => {
           <p>Year:</p> <p>{props.year}</p>
         </div>
         <button className="button edit" onClick={handleEdit}>Edit</button>
-        <button className="button delete">Delete</button>
+        <button className="button delete" onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );

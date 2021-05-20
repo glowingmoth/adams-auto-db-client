@@ -16,7 +16,7 @@ const Read = () => {
     }).catch(error => {
       console.log(error);
     });
-  }, []);
+  }, [customerList]);
 
 
   return (

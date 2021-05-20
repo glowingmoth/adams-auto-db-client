@@ -29,7 +29,7 @@ const CustomerUpdate = ({customerDetails}) => {
   }, [customerDetails]);
 
   const handleUpdate = () => {
-    Axios.put(`http://localhost:3001/update/${id}`, {}).then(response => {
+    Axios.put(`http://localhost:3001/update/${id}`, {currentDetails}).then(response => {
       alert('Successfully updated customer details');
       history.push(`/read/${id}`)
     });
