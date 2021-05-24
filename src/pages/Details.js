@@ -11,7 +11,7 @@ const Details = () => {
   const { id } = useParams(); 
   
   useEffect(() => {
-    Axios.get(`http://localhost:3001/read/${id}`).then(response => {
+    Axios.get(`https://adams-autocare-db.herokuapp.com/read/${id}`).then(response => {
       setCustomerDetails(response.data[0]);
     }).catch(error => {
       console.log(error);

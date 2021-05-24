@@ -9,7 +9,7 @@ const Update = () => {
   const [ customerDetails, setCustomerDetails] = useState({});
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/read/${id}`).then(response => {
+    Axios.get(`https://adams-autocare-db.herokuapp.com/read/${id}`).then(response => {
       setCustomerDetails(response.data[0]);
       console.log("axios.get: " + response.data[0].firstName + 'id: ' + id);
       

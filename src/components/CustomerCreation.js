@@ -22,7 +22,7 @@ const CustomerCreation = () => {
   const history = useHistory();
 
   const handleSubmit = () => {
-    Axios.post('http://localhost:3001/create', {
+    Axios.post('https://adams-autocare-db.herokuapp.com/create', {
       firstName: firstName,
       lastName: lastName,
       phone: phone,
@@ -35,7 +35,7 @@ const CustomerCreation = () => {
       model: model,
       year: year
     }).then(response => {
-      alert('successfully inserted customer');
+      alert('Successfully inserted customer');
       history.push('/read');
       console.log(response);
     }).catch(error => {

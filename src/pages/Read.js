@@ -7,24 +7,41 @@ import CustomerRow from '../components/CustomerRow';
 const Read = () => {
 
   const [customerList, setCustomerList] = useState([]);
+  const [alphabetiseList, setAlphabetiseList] = useState([]);
+  const [numericalList, setNumericalList] = useState([]);
+  const [changed, setChanged ] = useState()
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/read').then((response) => {
+    Axios.get('https://adams-autocare-db.herokuapp.com/read').then((response) => {
       // console.log(response)  
-    setCustomerList(response.data); 
-      
+      setCustomerList(response.data); 
+   
     }).catch(error => {
       console.log(error);
     });
-  }, [customerList]);
+  }, [changed]);
 
+  const handleNumerical = () => {
+    setNumericalList(customerList.sort((a, b) => (a.customer_id > b.customer_id ? 1 : -1)));
+    setChanged(false)
+  };
+
+  const handleAlphabetize = () => {
+    setAlphabetiseList(customerList.sort((a, b) => (a.firstName > b.firstName ? 1 : -1)));
+    setChanged(true)
+  };
 
   return (
     <div>
       <Link exact to="/create">Create</Link>
+     <button onClick={handleAlphabetize}>Alphabetise</button>
+     <button onClick={handleNumerical}>Numerical</button>
      <table>
        <thead>
          <tr>
+           <th>
+           <p className="list-category">Customer Id</p>
+           </th>
          <th>
           <p className="list-category">First Name</p>
          </th>
@@ -35,8 +52,7 @@ const Read = () => {
           <p className="list-category">Phone</p>
           </th> 
           </tr>       
-       </thead>
-            
+       </thead>  
          {customerList.map(customer => (
             <CustomerRow 
               key={customer.customer_id} 

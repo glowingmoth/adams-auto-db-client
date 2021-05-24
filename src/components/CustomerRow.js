@@ -9,6 +9,9 @@ const CustomerRow = (props) => {
       <tbody>
         <tr>
           <td>
+            {props.id}
+          </td>
+          <td>
             {props.firstName}  
           </td>
           <td>

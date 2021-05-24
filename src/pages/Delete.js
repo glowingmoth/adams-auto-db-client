@@ -12,7 +12,7 @@ const Delete = () => {
     // const [firstName, lastName] = customerDetails; 
     
     useEffect( () => {
-        Axios.get(`http://localhost:3001/read/${id}`).then(response => {
+        Axios.get(`https://adams-autocare-db.herokuapp.com/read/${id}`).then(response => {
             setCustomerDetails(response.data[0]);
         }).catch(error => {
             console.log(error);
@@ -21,8 +21,8 @@ const Delete = () => {
 
 
     const handleDelete = () => {
-        Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
-            alert('Customer Successfully Deleted');
+        Axios.delete(`https://adams-autocare-db.herokuapp.com/delete/${id}`).then(() => {
+            alert('Record successfully deleted');
         }).catch(error => {
             console.log(error);
         });
